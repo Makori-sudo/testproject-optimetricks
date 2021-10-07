@@ -57,6 +57,7 @@ a {
   color: white;
 }
 
+/* Changing the 'headline' text into a gradient */
 .page-wrap > h1 {
   font-size: 4em;
   background: linear-gradient(to right, #0d0ed4, #541beb, #780dd4, #cb0fcb);
@@ -87,7 +88,7 @@ a {
 
 /* Media Queries */
 
-/* Small Desktop screens */
+/* Medium Desktop screens */
 @media (max-width: 900px) {
   .page-wrap > h1 {
     line-height: 1;
