@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* My own code*/
+body {
+  font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 320px;
+  margin-top: 32px;
+  background: #fff;
+  color: #000;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/*Changing the main container to take up 90% of the screen width from the fixed 800px and centering it*/
+.page-wrap {
+  width: 90%;
+  margin: auto;
+}
+
+.main-story {
+  margin: 48px 0 24px 0;
+}
+
+/* Space between the 'main-story' and 'story-intro' classes*/
+.main-story img {
+  margin-bottom: 24px;
+}
+
+img {
+  display: block;
+  width: 100%; /*Fixing the images so they take up the entire width of the space allocated by the 'grid-template-columns' property */
+}
+
+a {
+  color: #02cce6;
+}
+
+/* Fixing the overlapping elements and introducing the gradients for the backgrounds*/
+.story-intro {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #0d0ed4,
+    #541beb,
+    #780dd4,
+    #cb0ff6
+  );
+  opacity: 0.9;
+  padding: 20px;
+  color: white;
+}
+
+.page-wrap > h1 {
+  font-size: 4em;
+  background: linear-gradient(to right, #0d0ed4, #541beb, #780dd4, #cb0fcb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
+}
+
+.story-intro h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+/* Introducing the 'repeat grid' function for the cards */
+.sub-stories {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  margin-bottom: 48px;
+}
+
+.sub-story {
+  position: relative;
+  font-size: 80%;
+}
+
+/* Media Queries */
+
+/* Small Desktop screens */
+@media (max-width: 900px) {
+  .page-wrap > h1 {
+    line-height: 1;
+    padding-bottom: 20px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 700px) {
+  .sub-stories {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .page-wrap > h1 {
+    font-size: 3.5em;
+    line-height: 1;
+    padding-bottom: 20px;
+  }
+
+  .story-intro h1 {
+    font-size: 2.4em;
+  }
+}
+
+/* Small screens  */
+@media (max-width: 500px) {
+  .sub-stories {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  h1 {
+    font-size: 2.6em;
+    line-height: 1;
+    padding-bottom: 20px;
+  }
+
+  .story-intro h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
+}
